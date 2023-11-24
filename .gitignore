@@ -1,0 +1,20 @@
+# Arquivos e diretórios gerados pelo Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Ambiente virtual
+venv/
+
+# Arquivos de configuração específicos do sistema
+*.pyc
+
+# Arquivos específicos do projeto
+db.sqlite  # Substitua com o nome do seu arquivo de banco de dados, se aplicável
+
+# Arquivos de logs
+*.log
+
+# Arquivos gerados automaticamente
+instance/
