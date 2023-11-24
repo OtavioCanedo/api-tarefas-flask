@@ -1,2 +1,2 @@
 # api-tarefas-flask
- API em Flask para comunicar com outra API
+ API em Flask para fazer a comunicação com outra API
