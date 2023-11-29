@@ -7,28 +7,14 @@ app = Flask(__name__)
 def createTask():
   node_url = "http://localhost:3000/createTasks"
 
-  tasks_data = [
-    {
-      "name": "Testar funcionalidades",
-      "description": "Realizar testes de unidade e integração nas funcionalidades do sistema",
+  task_data = {
+      "name": "Documentar código",
+      "description": "Criar documentação clara e detalhada para as 2 APIs",
       "priority": "medium",
       "status": "todo"
-    },
-    {
-      "name": "Otimizar desempenho",
-      "description": "Identificar e implementar otimizações para melhorar o desempenho do sistema",
-      "priority": "high",
-      "status": "todo"
-    },
-    {
-      "name": "Documentar código",
-      "description": "Criar documentação clara e detalhada para o código-fonte do projeto",
-      "priority": "low",
-      "status": "todo"
     }
-  ]
   
-  response = post(node_url, json=tasks_data)
+  response = post(node_url, task_data)
   print('Resposta da requisição da API Node:', response.json())
 
   if response.status_code == 200:
@@ -39,7 +25,8 @@ def createTask():
 createTask()
 
 @app.route("/getTasks", methods=["GET"])
-def getTasks(): 
+def getTasks():
+  print(Tasks)
   return Tasks
 
 if __name__ == "__main__":
